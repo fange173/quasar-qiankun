@@ -76,6 +76,22 @@ module.exports = configure(function (ctx) {
           chunkLoadingGlobal: `webpackJsonp_${name}`,
           publicPath: '/',
         };
+        cfg.module.rules.push({
+          test: /\.js$/,
+          loader: 'string-replace-loader',
+          options: {
+            search: '#q-app',
+            replace: '#q-app-child',
+          },
+        });
+        cfg.module.rules.push({
+          test: /\.js$/,
+          loader: 'string-replace-loader',
+          options: {
+            search: '[Quasar] Running SPA.',
+            replace: '[Quasar] Running Quasar Child SPA.',
+          },
+        });
       },
     },
 

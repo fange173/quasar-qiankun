@@ -28,7 +28,7 @@ console.info('[Quasar] Running SPA.');
 
 const publicPath = `/`;
 
-async function start({ app, router }, bootFiles) {
+export async function start({ app, router }, bootFiles) {
   let hasRedirected = false;
   const getRedirectUrl = url => {
     try {
@@ -84,7 +84,7 @@ async function start({ app, router }, bootFiles) {
 
   app.use(router);
 
-  app.mount('#q-app-child');
+  app.mount('#q-app');
 }
 
 // 封装createQuasarApp且导出

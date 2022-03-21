@@ -15,6 +15,7 @@
     "babel-loader": "^8.2.3",
     "core-js": "^3.21.0",
     "quasar": "^2.5.5",
+    "string-replace-loader": "^3.1.0",
     "vue": "^3.0.0",
     "vue-json-viewer": "3",
     "vue-router": "^4.0.0"
